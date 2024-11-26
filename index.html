@@ -1,0 +1,571 @@
+<!-- Your main page should go here -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mount Tai</title>
+    <style>
+      .container {
+        display: flex;
+      }
+
+      .sidebar {
+        width: 25%;
+        background-color: #a8a8a8;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        padding: 15px;
+        box-sizing: border-box;
+      }
+
+      .sidebar-menu {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .sidebar-menu li {
+        margin: 30px 0;
+      }
+
+      .sidebar-menu a {
+        text-decoration: none;
+        color: rgb(119, 68, 68);
+      }
+
+      .content {
+        width: 75%;
+        background-color: #f5f5f5;
+        padding: 20px;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      h1,
+      h2 {
+        color: #c89b3c;
+      }
+
+      a {
+        text-decoration: none;
+        color: rgb(166, 80, 10);
+      }
+
+      a:hover {
+        color: #607d3b;
+      }
+
+      .audio-container {
+        display: flex;
+        justify-content: left;
+        margin-top: 20px;
+      }
+      .audio-player {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #b3a17f;
+        border: 2px solid #7a8837;
+        width: 350px;
+        padding: 10px;
+        border-radius: 20px;
+        text-align: center;
+        margin-right: 20px;
+      }
+
+      audio {
+        width: 100%;
+        opacity: 0.8;
+      }
+
+      .audio-overlay-text {
+        position: absolute;
+        color: #607d3b;
+        font-size: 16px;
+        font-weight: bold;
+        pointer-events: none;
+      }
+
+      .header {
+        background-color: #607d3b;
+        color: black;
+        font-weight: bold;
+        text-align: center;
+        padding: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .footer {
+        background-color: #a8a8a8;
+        color: black;
+        font-weight: bold;
+        text-align: center;
+        padding: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .author-date {
+        font-size: 0.9em;
+        margin-top: 5px;
+      }
+
+      .image {
+        width: 365px;
+        height: 300px;
+        margin-left: 20px;
+        display: inline-block;
+      }
+
+      .justified {
+        text-align: justify;
+        margin: 10px;
+        text-indent: 30px;
+      }
+
+      .reference {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <h1 style="font-family: Arial, Helvetica, sans-serif">
+        Discover the Majestic Mount Tai: A Journey Through History and Nature
+      </h1>
+      <p style="font-size: 18px; font-family: Arial, Helvetica, sans-serif">
+        Every step of Mount Tai brings me closer to the endless scenery and vast horizons.
+      </p>
+    </div>
+
+    <div class="container">
+      <div class="sidebar">
+        <nav>
+          <ul class="sidebar-menu">
+            <li><a href="#category_1">Historical Information</a></li>
+            <li><a href="#category_2">How to Get There</a></li>
+            <li><a href="#category_3">What and Where to Eat</a></li>
+            <li><a href="#category_4">Local Attractions</a></li>
+            <li><a href="#category_5">Interesting Events</a></li>
+          </ul>
+        </nav>
+
+        <p
+          style="
+            font-size: 25px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #9e7723;
+          "
+        >
+          MORE VIEWED
+        </p>
+        <a href="https://en.wikipedia.org/wiki/Mount_Tai?variant=zh-cn" target="_blank">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/%E6%B3%B0%E5%B1%B1_%E5%8D%97%E5%A4%A9%E9%97%A8.jpg/544px-%E6%B3%B0%E5%B1%B1_%E5%8D%97%E5%A4%A9%E9%97%A8.jpg"
+            alt="viewMore 1"
+            width="300px"
+          />
+          <span>Mount Tai(WIKEPEDIA)</span>
+        </a>
+
+        <a href="https://www.chinadiscovery.com/shandong/taian/mount-tai.html" target="_blank">
+          <img
+            src="https://www.chinadiscovery.com/assets/images/taishan/taishan/mount-taishan-788.jpg"
+            alt="viewMore 2"
+            width="300px"
+          />
+          <span>Mount Tai (Taishan) - The Greatest of Five Sacred Mountains in China</span>
+        </a>
+
+        <a href="http://www.china-tour.cn/Taian/Taian-Dai-Temple.htm" target="_blank">
+          <img
+            src="http://www.china-tour.cn/images/Taian/Dai-Temple-1.jpg"
+            alt="viewMore 3"
+            width="300px"
+          />
+          <span>Taian Dai Temple</span>
+        </a>
+
+        <a href="https://www.goteamjosh.com/blog/chungcon" target="_blank">
+          <img
+            src="https://images.squarespace-cdn.com/content/v1/5438e2c6e4b0b18459a8ca06/1513702897939-7Z7RB7J4YXPUBFJJH5JB/GTJ-2017-1110-86.jpg?format=750w"
+            alt="viewMore 4"
+            width="300px"
+          />
+          <span>Taichung Confucius Temple (臺中孔廟)</span>
+        </a>
+
+        <a
+          href="https://www.tripadvisor.ca/Tourism-g303761-Tai_an_Shandong-Vacations.html"
+          target="_blank"
+        >
+          <img
+            src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/84/ec/67/mount-tai.jpg?w=2400&h=-1&s=1"
+            alt="viewMore 5"
+            width="300px"
+          />
+          <span>Tai'an, China: All You Need to Know Before You Go (2024)</span>
+        </a>
+
+        <a href="https://www.trip.com/travel-guide/destination/tai-an-746/" target="_blank">
+          <img
+            src="https://ak-d.tripcdn.com/images/1lo1m12000c2dglxv4460_C_760_506_R5.jpg?proc=source/trip"
+            alt="viewMore 6"
+            width="300px"
+          />
+          <span>Things to Do in Tai'an in 2024 - Top Attractions, Local Food ...</span>
+        </a>
+
+        <a href="https://www.travelchinaguide.com/shandong-cuisine.htm" target="_blank">
+          <img
+            src="https://www.travelchinaguide.com/images/photogallery/2011/shandong-cuisine.jpg"
+            alt="viewMore 7"
+            width="300px"
+          />
+          <span>Shandong Cuisine – No. 1 of 8 Great Cuisines of China</span>
+        </a>
+
+        <a href="https://www.chinadiscovery.com/shandong-tours/things-to-do.html" target="_blank">
+          <img
+            src="https://www.chinadiscovery.com/assets/images/shandong/things-to-do/things-to-do-shandong.jpg"
+            alt="viewMore 8"
+            width="300px"
+          />
+          <span>Things to do in Shandong, Top Shandong Attractions</span>
+        </a>
+
+        <a
+          href="https://www.chinahighlights.com/travelguide/china-top-10-attractions.htm"
+          target="_blank"
+        >
+          <img
+            src="https://images.chinahighlights.com/allpicture/2021/08/45e419b5fa8748f983b67e92.webp"
+            alt="viewMore 9"
+            width="300px"
+          />
+          <span>China's Top 15 Must-Visit Attractions: Historical, Cultural, Scenic & More</span>
+        </a>
+
+        <a
+          href="https://www.chinahighlights.com/travelguide/chinese-food/eight-chinese-dishes.htm"
+          target="_blank"
+        >
+          <img
+            src="https://images.chinahighlights.com/allpicture/2021/12/d247e7d25b164b77841f6022_cut_750x400_39.webp"
+            alt="viewMore 10"
+            width="300px"
+          />
+          <span>The 15 Most Popular Chinese Dishes, Tasty Chinese Food</span>
+        </a>
+      </div>
+
+      <div class="content">
+        <div class="author-date">
+          <p>By <strong>Jie Yu</strong></p>
+          <p>Date: October 31, 2024</p>
+        </div>
+
+        <div class="audio-container">
+          <div class="audio-player">
+            <div class="audio-overplay-text">Background Music</div>
+            <audio id="backgroundAudio" controls loop>
+              <source
+                src="https://jieyu238.github.io/audioAndVideo/background_music.mp3"
+                type="audio/mp3"
+              />
+            </audio>
+          </div>
+
+          <div class="audio-player">
+            <div class="audio-overplay-text">Listen to the article</div>
+            <audio id="listen_to_article" controls>
+              <source
+                src="https://jieyu238.github.io/audioAndVideo/Mount%20Tai.mp3"
+                type="audio/mp3"
+              />
+            </audio>
+          </div>
+        </div>
+
+        <h2 id="category_1">Historical information</h2>
+
+        <img
+          src="https://www.chinadaily.com.cn/m/taian2016/img/attachement/jpg/site1/20161127/286ed488c7fb19a4be2c1f.jpg"
+          alt="Image 1"
+          class="image"
+        />
+        <img
+          src="https://www.lifebeyondtourism.org/wp-content/uploads/2021/03/2.Jade-Emperor-Peak.jpg"
+          alt="Image 2"
+          class="image"
+        /><br />
+
+        <p style="font-size: 18px" class="justified">
+          Mount Tai is one of China’s most important and oldest mountains. For over 3,000 years,
+          people have come here to pray and show respect. Long ago, Chinese emperors would climb
+          Mount Tai to perform special ceremonies, which they believed gave them strength to rule.
+          These emperors left behind carvings and stone tablets that can still be seen today (Li,
+          J., 2015). The mountain has many temples, where people come to worship according to
+          Buddhist, Daoist, and Confucian beliefs. Over the years, writers and poets have described
+          Mount Tai as a place of power and beauty. Because of its long history and cultural
+          importance, Mount Tai was named a UNESCO (UNESCO, 1987) World Heritage Site in 1987.
+          Today, many visitors still climb its 7,200 steps to experience its history and peaceful
+          views.
+        </p>
+
+        <h2 id="category_2">How to get There</h2>
+
+        <a href="https://www.google.ca/maps/place/Taishan+Mountain" target="_blank">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25738.607324338773!2d117.0849128823622!3d36.25586563346553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35c228a3278a80b3%3A0x5b09db3a09cd99e1!2sTaishan%20Mountain!5e0!3m2!1sen!2sca!4v1730225440779!5m2!1sen!2sca"
+            width="365px"
+            height="300px"
+            style="border: 0; margin-left: 20px"
+            allowfullscreen=""
+            loading="lazy"
+          >
+          </iframe>
+        </a>
+        <img
+          src="https://whc.unesco.org/uploads/thumbs/site_0437_0001-1000-1500-20080618103936.jpg"
+          alt="Image 3"
+          class="image"
+        /><br />
+
+        <p style="font-size: 18px" class="justified">
+          To reach Mount Tai, most visitors travel to the nearby city of Tai’an in Shandong
+          Province, China. Tai’an is accessible by train, including high-speed trains from major
+          cities like Beijing and Shanghai, making it easy to reach within a few hours. From Tai’an,
+          local buses, taxis, and shuttles take you to the base of the mountain. There, you can
+          choose to hike the ancient stairway with 7,200 steps or take a bus halfway up, followed by
+          a cable car to near the summit (Tai'an Tourism Bureau, nd). Both options offer beautiful
+          views and let you experience Mount Tai’s history and scenery.
+        </p>
+
+        <h2 id="category_3">What and Where to Eat</h2>
+
+        <img
+          src="https://piaoxiangnaicha.wordpress.com/wp-content/uploads/2011/06/dsc01161.jpg?w=1068&h=712"
+          alt="Image 4"
+          class="image"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_Mue00Zd9NnCsOZyn7CLZgTLSuMn_FukB7g&s"
+          alt="Image 5"
+          class="image"
+        />
+
+        <p style="font-size: 18px" class="justified">
+          When visiting Mount Tai, it’s a good idea to bring your own snacks and meals. The food
+          available on the mountain is often not tasty and can be pricey. Instead, after your hike,
+          you can enjoy a wide range of delicious local dishes in Tai’an. The city is known for its
+          food, including dumplings, noodles, and local specialties. Many restaurants serve fresh,
+          flavorful meals at reasonable prices, allowing you to relax and refuel after your hike
+          (Chen, Y., 2017). Enjoying a meal in Tai’an is a great way to experience the local
+          culture.
+        </p>
+
+        <h2 id="category_4" style="font-family: Arial, Helvetica, sans-serif">Local Attractions</h2>
+        <img
+          src="https://zhongguojumble.wordpress.com/wp-content/uploads/2012/07/imgp9799.jpg?w=490"
+          alt="Image 6"
+          class="image"
+        />
+        <img
+          src="https://images.squarespace-cdn.com/content/v1/5438e2c6e4b0b18459a8ca06/1513702569793-NG1HPW8PAHSPVGS4BV7Z/GTJ-2017-1110-81.jpg?format=2500w"
+          alt="Image 7"
+          class="image"
+        />
+
+        <p style="font-size: 18px" class="justified">
+          Tai'an has many exciting attractions besides Mount Tai. One popular spot is the Dai
+          Temple, located at the foot of the mountain. This ancient temple is known for its
+          beautiful architecture and rich history, making it a great place to learn about Chinese
+          culture (Dai Temple, nd). Another interesting site is the Tai’an Confucius Temple, where
+          visitors can explore the teachings of Confucius (Tai'an Confucius Temple, nd). The city
+          also features lovely parks, such as the Tai'an City Park, perfect for relaxing walks.
+          Additionally, Tai'an is famous for its hot springs, where visitors can enjoy a soothing
+          soak after exploring the area (Wang, S., 2018).
+        </p>
+
+        <h2 id="category_5" style="font-family: Arial, Helvetica, sans-serif">
+          Interesting Events
+        </h2>
+
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/R0YpcQ_T9w8?si=M59Y0v2-N_i31le5"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+
+        <p style="font-size: 18px" class="justified">
+          Tai'an is known for hosting a variety of exciting events that attract many visitors each
+          year. One popular event is the annual Mount Tai Climbing Festival in spring (Zhang, L.,
+          2020), where people gather to hike the mountain and enjoy the stunning views. Many
+          tourists share stories of conquering the mountain during this festival and celebrating
+          with local food and music at the base afterward. In April, the Tai'an International Cherry
+          Blossom Festival features beautiful cherry blossoms and lively performances, delighting
+          tourists with a vibrant atmosphere (Tai'an International Cherry Blossom Festival, nd). The
+          autumn Peach Blossom Festival is another highlight, where visitors can sample delicious
+          peaches and purchase handmade crafts, creating memorable experiences during their trip.
+        </p>
+      </div>
+    </div>
+
+    <div class="reference">
+      <h3 id="reference list">Reference List</h3>
+      <p>
+        1. Li, J. (2015). The Cultural Significance of Mount Tai in Chinese History.
+        <em>Journal of Chinese Culture Studies</em>, 12(3), 45-59.
+      </p>
+      <p>
+        2. UNESCO. (1987). Mount Tai. Retrieved from
+        <a href="https://whc.unesco.org/en/list/437" target="_blank"
+          >https://whc.unesco.org/en/list/437</a
+        >
+      </p>
+      <p>
+        3. Tai'an Tourism Bureau. (n.d.). <em>How to Get to Mount Tai</em>. Retrieved from
+        <a href="http://www.taiantourism.com" target="_blank">http://www.taiantourism.com</a>
+      </p>
+      <p>
+        4. Chen, Y. (2017). A Culinary Journey Through Tai'an. <em>Gastronomy in China</em>, 3(2),
+        15-22.
+      </p>
+      <p>
+        5. Dai Temple. (n.d.). <em>Dai Temple in Tai'an</em>. Retrieved from
+        <a href="http://www.daitemple.com" target="_blank">http://www.daitemple.com</a>
+      </p>
+      <p>
+        6. Tai'an Confucius Temple. (n.d.). <em>Tai'an Confucius Temple Overview</em>. Retrieved
+        from <a href="http://www.taiancftemple.com" target="_blank">http://www.taiancftemple.com</a>
+      </p>
+      <p>
+        7. Wang, S. (2018). Exploring Tai'an: A Guide to the City and Its Attractions.
+        <em>China Travel Guide</em>, 5(1), 23-30.
+      </p>
+      <p>
+        8. Zhang, L. (2020). Festivals and Events in Tai'an. <em>Cultural Heritage Review</em>,
+        15(2), 78-84.
+      </p>
+      <p>
+        9. Tai'an International Cherry Blossom Festival. (n.d.). <em>Annual Events in Tai'an</em>.
+        Retrieved from
+        <a href="http://www.taianspringfestivals.com" target="_blank"
+          >http://www.taianspringfestivals.com</a
+        >
+      </p>
+      <p>
+        10. Image 1 Retrieved from
+        <a
+          href="https://www.chinadaily.com.cn/m/taian2016/img/attachement/jpg/site1/20161127/286ed488c7fb19a4be2c1f.jpg"
+          target="_blank"
+          >https://www.chinadaily.com.cn/m/taian2016/img/attachement/jpg/site1/20161127/286ed488c7fb19a4be2c1f.jpg</a
+        >
+      </p>
+      <p>
+        11. Image 2 Retrieved from
+        <a
+          href="https://www.lifebeyondtourism.org/wp-content/uploads/2021/03/2.Jade-Emperor-Peak.jpg"
+          >https://www.lifebeyondtourism.org/wp-content/uploads/2021/03/2.Jade-Emperor-Peak.jpg</a
+        >
+      </p>
+      <p>
+        12. Interactive Map Retrieved from
+        <a href="https://www.google.ca/maps/place/Taishan+Mountain" target="_blank"
+          >https://www.google.ca/maps/place/Taishan+Mountain</a
+        >
+      </p>
+      <p>
+        13. Image 3 Retrieved from
+        <a
+          href="https://whc.unesco.org/uploads/thumbs/site_0437_0001-1000-1500-20080618103936.jpg"
+          target="_blank"
+          >https://whc.unesco.org/uploads/thumbs/site_0437_0001-1000-1500-20080618103936.jpg</a
+        >
+      </p>
+      <p>
+        14. Image 4 Retrieved from
+        <a
+          href="https://piaoxiangnaicha.wordpress.com/wp-content/uploads/2011/06/dsc01161.jpg?w=1068&h=712"
+          target="_blank"
+          >https://piaoxiangnaicha.wordpress.com/wp-content/uploads/2011/06/dsc01161.jpg?w=1068&h=712</a
+        >
+      </p>
+      <p>
+        15. Image 5 Retrieved from
+        <a
+          href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_Mue00Zd9NnCsOZyn7CLZgTLSuMn_FukB7g&s"
+          target="_blank"
+          >https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_Mue00Zd9NnCsOZyn7CLZgTLSuMn_FukB7g&s</a
+        >
+      </p>
+      <p>
+        16. Image 6 Retrieved from
+        <a
+          href="https://zhongguojumble.wordpress.com/wp-content/uploads/2012/07/imgp9799.jpg?w=490"
+          target="_blank"
+          >https://zhongguojumble.wordpress.com/wp-content/uploads/2012/07/imgp9799.jpg?w=490</a
+        >
+      </p>
+      <p>
+        17. Image 7 Retrieved from
+        <a
+          href="https://images.squarespace-cdn.com/content/v1/5438e2c6e4b0b18459a8ca06/1513702569793-NG1HPW8PAHSPVGS4BV7Z/GTJ-2017-1110-81.jpg?format=2500w"
+          target="_blank"
+          >https://images.squarespace-cdn.com/content/v1/5438e2c6e4b0b18459a8ca06/1513702569793-NG1HPW8PAHSPVGS4BV7Z/GTJ-2017-1110-81.jpg?format=2500w</a
+        >
+      </p>
+      <p>
+        18. Video Retrieved from
+        <a href="https://www.youtube.com/embed/R0YpcQ_T9w8?si=M59Y0v2-N_i31le5" target="_blank"
+          >https://www.youtube.com/embed/R0YpcQ_T9w8?si=M59Y0v2-N_i31le5</a
+        >
+      </p>
+      <p>
+        19. backgroundAudio Retrieved from
+        <a href="https://www.chosic.com/download-audio/30399/" target="_blank"></a
+        >https://www.chosic.com/download-audio/30399/
+      </p>
+      <p>20. listen_to_article Generated by AI</p>
+    </div>
+
+    <div class="footer">
+      <div>
+        <a href="about.html" target="_blank">About me</a> |
+        <a href="honesty.html" target="_blank">Honesty Statement</a>
+      </div>
+      <p>&copy; 2024 Mount Tai Guide. All rights reserved.</p>
+      <a href="https://twitter.com/share?url=YOUR_PAGE_URL" target="_blank">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4ThiqtiOhMQ8kopOpK9tDB4YqWBTRv5uInw&s"
+          alt="Share on Twitter"
+          style="width: 30px; height: 30px; margin-right: 10px"
+        />
+      </a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=YOUR_PAGE_URL" target="_blank">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlS_CAXT6MEy4vrUdzjlDXWqu_RE0DEwJCLg&s"
+          alt="Share on Facebook"
+          style="width: 30px; height: 30px; margin-right: 10px"
+        />
+      </a>
+      <a href="https://help.instagram.com/110121795815331/?helpref=uf_share" target="_blank">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3zd7fc_SGljRfUDlXQ3eSHSkrLORCovjskw&s"
+          alt="Share on Instagram"
+          style="width: 30px; height: 30px; margin-right: 10px"
+        />
+      </a>
+    </div>
+  </body>
+</html>
