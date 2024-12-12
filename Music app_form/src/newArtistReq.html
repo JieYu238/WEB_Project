@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Request a New Artist</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
+  <body>
+    <main>
+      <h1>Request a New Artist</h1>
+      <form id="artist-form" action="https://httpbin.org/post" method="POST">
+        <!-- Artist Name Section -->
+        <div class="form-group artist-name">
+          <label for="artist-name">Artist's Name:</label>
+          <input type="text" id="artist-name" name="artist-name" required />
+        </div>
+
+        <!-- Social Media URLs Section -->
+        <div class="form-group social-media-urls">
+          <label for="social-media-urls">Social Media URLs:</label>
+          <input
+            type="url"
+            id="social-media-urls"
+            name="social-media-urls[]"
+            placeholder="Enter social media URL"
+            required
+          />
+        </div>
+
+        <!-- Example Song/Video Links Section -->
+        <div class="form-group example-links">
+          <label for="example-links">Song/Video Links:</label>
+          <input
+            type="url"
+            id="example-links"
+            name="example-links[]"
+            placeholder="Enter song or video URL"
+          />
+          <button type="button" id="add-link">Add Another Link</button>
+        </div>
+
+        <!-- Music Genre Section -->
+        <div class="form-group music-genre">
+          <label for="music-genre">Music Genre:</label>
+          <input list="genres" id="music-genre" name="music-genre" required />
+          <datalist id="genres">
+            <option value="Pop"></option>
+            <option value="Rock"></option>
+            <option value="Hip-hop"></option>
+            <option value="Jazz"></option>
+            <option value="Classical"></option>
+            <option value="Electronic"></option>
+            <option value="Reggae"></option>
+            <option value="R&B"></option>
+            <option value="Country"></option>
+            <option value="Blues"></option>
+          </datalist>
+        </div>
+
+        <!-- Explicit Lyrics Section -->
+        <div class="form-group explicit-lyrics">
+          <input type="checkbox" id="explicit" name="explicit" />
+          <label for="explicit">Contains Explicit Lyrics</label>
+        </div>
+
+        <!-- Artist Description Section -->
+        <div class="form-group artist-description">
+          <label for="artist-description"
+            >Why should this artist be added?</label
+          >
+          <textarea
+            id="artist-description"
+            name="artist-description"
+            rows="4"
+            required
+          ></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit Request</button>
+      </form>
+    </main>
+
+    <script>
+      document
+        .getElementById("add-link")
+        .addEventListener("click", function () {
+          // Create a new input element for another song/video link
+          var newInput = document.createElement("input");
+          newInput.type = "url";
+          newInput.name = "example-links[]";
+          newInput.placeholder = "Enter song or video URL";
+
+          // Append the new input below the existing ones
+          document.querySelector(".example-links").insertBefore(newInput, this);
+        });
+
+      function validateForm() {
+        // Name Validation (between 3 and 50 characters)
+        var name = document.getElementById("artist-name").value.trim();
+        if (name.length < 3 || name.length > 50) {
+          alert("Please enter an artist name between 3 and 50 characters.");
+          return false;
+        }
+
+        // Social Media URL Validation
+        var socialMediaUrls = document.getElementsByName("social-media-urls[]");
+        for (var i = 0; i < socialMediaUrls.length; i++) {
+          var url = socialMediaUrls[i].value.trim();
+          if (!isValidUrl(url)) {
+            alert("Please enter a valid social media URL.");
+            return false;
+          }
+        }
+
+        // Song/Video Link Validation
+        var songVideoLinks = document.getElementsByName("example-links[]");
+        for (var j = 0; j < songVideoLinks.length; j++) {
+          var link = songVideoLinks[j].value.trim();
+          if (!isValidUrl(link)) {
+            alert("Please enter a valid song or video link.");
+            return false;
+          }
+        }
+
+        // Music Genre Validation
+        var genre = document.getElementById("music-genre").value.trim();
+        var validGenres = [
+          "Pop",
+          "Rock",
+          "Hip-hop",
+          "Jazz",
+          "Classical",
+          "Electronic",
+          "Reggae",
+          "R&B",
+          "Country",
+          "Blues",
+        ];
+        if (!validGenres.includes(genre)) {
+          alert("Please select a valid music genre.");
+          return false;
+        }
+
+        // Artist Description Validation (min length 10 characters)
+        var description = document
+          .getElementById("artist-description")
+          .value.trim();
+        if (description.length < 10) {
+          alert("Please provide a description of at least 10 characters.");
+          return false;
+        }
+
+        // If all validations pass
+        return true;
+      }
+
+      // Helper function to validate URL format
+      function isValidUrl(url) {
+        var urlPattern =
+          /^(https?:\/\/)?([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,6}(\/[^\s]*)?$/;
+        return urlPattern.test(url);
+      }
+    </script>
+  </body>
+</html>
